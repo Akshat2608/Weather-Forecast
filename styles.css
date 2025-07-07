@@ -1,0 +1,247 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('farm.jpg') no-repeat center center/cover;
+    color: #212121;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: rgba(33, 33, 33, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #4caf50;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 250px;
+    background: rgba(18, 18, 18, 0.95);
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #2e7d32;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #388e3c;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Main Content */
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Sections */
+section {
+    background: rgba(33, 33, 33, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Section Headers */
+section h2 {
+    color: #4caf50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+section h3 {
+    color: #81c784;
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+/* Weather Details */
+#weatherDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+#weatherDetails p {
+    background: rgba(18, 18, 18, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    border: 1px solid #404040;
+}
+
+#weatherDetails span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #81c784;
+    margin-top: 5px;
+}
+
+#temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #81c784;
+}
+
+/* Soil Data Section */
+#soilDataDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+#soilDataDetails p {
+    background: rgba(18, 18, 18, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    color: #e0e0e0;
+    border: 1px solid #404040;
+}
+
+/* Weather Summary */
+.weather-summary {
+    background: rgba(18, 18, 18, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #404040;
+}
+
+.weather-summary h3 {
+    color: #81c784;
+    margin-bottom: 15px;
+}
+
+.weather-summary p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    padding: 8px;
+    background: rgba(33, 33, 33, 0.95);
+    border-radius: 5px;
+    color: #e0e0e0;
+    border: 1px solid #404040;
+}
+
+/* Forecast */
+#forecastContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.forecast-card {
+    background: rgba(18, 18, 18, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #e0e0e0;
+    border: 1px solid #404040;
+}
+
+/* Crop Recommendations */
+#cropList {
+    list-style: none;
+    padding: 0;
+}
+
+#cropList li {
+    background: rgba(18, 18, 18, 0.95);
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    text-align: left;
+    border: 1px solid #404040;
+}
+
+#cropList li strong {
+    color: #81c784;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+#cropList li:hover {
+    transform: translateX(10px);
+    background: rgba(33, 33, 33, 0.95);
+    border-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+
+    #weatherDetails,
+    #soilDataDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .forecast-card {
+        width: 100%;
+    }
+}

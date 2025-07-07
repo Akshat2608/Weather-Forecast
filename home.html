@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Crop Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            color: black;
+            font-size: 18px;
+        }
+        header {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 12px;
+            width: 300px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            font-size: 1rem;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            background: #FFD700;
+            color: black;
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            background: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weather Forecast & Crop Recommendation</h1>
+        <input type="text" id="locationInput" placeholder="Enter location...">
+        <button id="searchButton">Search</button>
+        <!-- Container for displaying multiple city results -->
+        <div id="cityResults"></div>
+    </header>
+    
+    <main>
+        <section id="weatherSection">
+            <h2>Current Weather</h2>
+            <div id="weatherDetails">
+                <p>Temperature: <span id="temperature">--</span>°C</p>
+                <p>Humidity: <span id="humidity">--</span>%</p>
+                <p>Precipitation: <span id="precipitation">--</span> mm</p>
+                <p>Wind Speed: <span id="windSpeed">--</span> km/h</p>
+            </div>
+        </section>
+        
+        <section id="forecastSection">
+            <h2>7-Day Forecast</h2>
+            <div id="forecastContainer">
+                <!-- Forecast data will be dynamically inserted here -->
+            </div>
+        </section>
+        
+        <section id="soilDataSection">
+            <h2>Soil Data</h2>
+            <div id="soilDataDetails">
+                <p>Soil Temperature (6cm): <span id="soilTemperature">--</span>°C</p>
+                <p>Soil Moisture (1-3cm): <span id="soilMoisture">--</span> m³/m³</p>
+            </div>
+        </section>
+        
+        <section id="cropRecommendation">
+            <h2>Crop Recommendations</h2>
+            <ul id="cropList"></ul>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
